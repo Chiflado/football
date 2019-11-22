@@ -1,1 +1,5 @@
-<p *ngIf="competetition">{{competetition.name}}</p>
+<mat-card class="competition-content">
+    <mat-card-header>
+        <mat-card-title *ngIf="competetition">{{competetition.name}}</mat-card-title>
+    </mat-card-header>
+</mat-card>
