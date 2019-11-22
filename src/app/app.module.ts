@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutComponent } from './layout/layout.component';
 import { TopNavbarComponent } from './layout/top-navbar/top-navbar.component';
 import { SideNavbarComponent } from './layout/side-navbar/side-navbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/material.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { SideNavbarComponent } from './layout/side-navbar/side-navbar.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
