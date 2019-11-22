@@ -8,17 +8,21 @@ import { TopNavbarComponent } from './layout/top-navbar/top-navbar.component';
 import { SideNavbarComponent } from './layout/side-navbar/side-navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
+import { CompetitionComponent } from './pages/competition/competition.component';
+import { LayoutRoutingModule } from './layout/layout-router.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     TopNavbarComponent,
-    SideNavbarComponent
+    SideNavbarComponent,
+    CompetitionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    LayoutRoutingModule,
     BrowserAnimationsModule,
     MaterialModule
   ],

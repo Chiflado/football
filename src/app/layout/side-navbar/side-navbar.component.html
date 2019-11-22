@@ -1,7 +1,10 @@
 <div class="side-navbar">
     <mat-list class="side-menu" *ngIf="competitions">
-        <mat-list-item *ngFor="let competition of competitions" class="side-menu-item">
-            <a href="#">{{ competition.name }}</a>
+        <mat-list-item  
+            *ngFor="let competition of competitions"    
+            class="side-menu-item"
+            (click)="navigatesToCompetitionPage(competition)">
+            {{ competition.name }}
         </mat-list-item>
     </mat-list>
 </div>
