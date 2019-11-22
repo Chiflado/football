@@ -13,4 +13,10 @@ export class DataService {
       MockCompetetions
     )
   }
+
+  getCompetition(compId: number): Observable<Competition> {
+    return of(
+      MockCompetetions.find(c => c.id === compId)
+      )
+  }
 }

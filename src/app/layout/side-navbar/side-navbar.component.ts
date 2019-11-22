@@ -26,6 +26,7 @@ export class SideNavbarComponent implements OnInit {
   }
 
   navigatesToCompetitionPage(comp: Competition) {
+    sessionStorage.setItem('compId', comp.id.toString()),
     this.router.navigate([`${this.nameToUrl(comp.name)}`]);
   }
 
