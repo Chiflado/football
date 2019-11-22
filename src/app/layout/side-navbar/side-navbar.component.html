@@ -1,58 +1,7 @@
 <div class="side-navbar">
-    <mat-list class="side-menu">
-        <mat-list-item class="side-menu-item">
-            <a href="#">Pepper</a>
+    <mat-list class="side-menu" *ngIf="competitions">
+        <mat-list-item *ngFor="let competition of competitions" class="side-menu-item">
+            <a href="#">{{ competition.name }}</a>
         </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Salt</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Paprika</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Pepper</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Salt</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Paprika</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Pepper</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Salt</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Paprika</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Pepper</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Salt</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Paprika</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Pepper</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Salt</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-            <a href="#">Paprika</a>
-        </mat-list-item>
-        <mat-list-item class="side-menu-item">
-                <a href="#">Pepper</a>
-            </mat-list-item>
-            <mat-list-item class="side-menu-item">
-                <a href="#">Salt</a>
-            </mat-list-item>
-            <mat-list-item class="side-menu-item">
-                <a href="#">Paprika</a>
-            </mat-list-item>
     </mat-list>
 </div>
