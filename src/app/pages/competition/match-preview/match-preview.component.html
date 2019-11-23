@@ -1,6 +1,6 @@
 <div class="preview-container">
     <div class="preview-date">
-        <span *ngIf="match.status === 'FINISHED'">{{getMatchDate(match) | date: 'MM.dd HH:mm'}}</span>
+        <span *ngIf="match.status === 'FINISHED'">Ended</span>
         <span *ngIf="match.status === 'UPCOMING'">{{getMatchDate(match) | date: 'HH:mm'}}</span>
         <span *ngIf="match.status === 'LIVE'" class="text-red">{{getMatchDate(match)}}'</span>
     </div>

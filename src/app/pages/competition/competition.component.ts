@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Competition, MatchDay } from 'src/app/shared/domain/MOCK-DATA/data';
+import { Competition, MatchDay, MatchEvent } from 'src/app/shared/domain/MOCK-DATA/data';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/shared/domain/data-service/data.service';
 
@@ -36,12 +36,25 @@ export class CompetitionComponent implements OnInit {
     }
   }
 
-  getMatches() {}
+  navigateToMatch(match: MatchEvent) {
+    // sessionStorage.setItem('macthId', match.id.toString()),
+    this.router.navigate([`${this.eventToUrl(match)}`], {relativeTo: this.route});
+  }
 
-  getSeason(comp: Competition) {
+  eventToUrl(match: MatchEvent) {
+    const home = this.removeWhiteSpaces(match.homeTeam);
+    const away = this.removeWhiteSpaces(match.awayTeam);
+    return `${home}-${away}-${this.getSeason(this.competetition, '-')}`
+  }
+
+  removeWhiteSpaces(text: string) {
+    return text.replace(/\s/g, '').toLowerCase();
+  } 
+
+  getSeason(comp: Competition, divider) {
     const start = comp.currentSeason.startDate;
     const end = comp.currentSeason.endDate;
-    return new Date(start).getFullYear() + '/' + new Date(end).getFullYear();
+    return new Date(start).getFullYear() + divider + new Date(end).getFullYear();
   }
 
 }

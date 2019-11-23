@@ -2,14 +2,17 @@
     <mat-card-header *ngIf="competetition">
         <mat-card-title>{{competetition.name}}</mat-card-title>
         <mat-card-subtitle>
-            <span>Season: {{getSeason(competetition)}}</span>
+            <span>Season: {{getSeason(competetition, '/')}}</span>
             <br>
             <span>Matchday: {{competetition.currentSeason.currentMatchday}}</span>
         </mat-card-subtitle>
     </mat-card-header>
     <div class="matches-list-container">
         <mat-list class="matches-list" *ngIf="matches">
-            <mat-list-item *ngFor="let match of matches.events">
+            <mat-list-item
+                *ngFor="let match of matches.events"
+                class="matches-list-element"
+                (click)="navigateToMatch(match)">
                 <app-match-preview
                     class="match-preview-element"
                     [match]="match">

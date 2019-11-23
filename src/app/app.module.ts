@@ -11,6 +11,7 @@ import { MaterialModule } from './shared/material.module';
 import { CompetitionComponent } from './pages/competition/competition.component';
 import { LayoutRoutingModule } from './layout/layout-router.module';
 import { MatchPreviewComponent } from './pages/competition/match-preview/match-preview.component';
+import { MatchEventInfoComponent } from './pages/match-event-info/match-event-info.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MatchPreviewComponent } from './pages/competition/match-preview/match-p
     TopNavbarComponent,
     SideNavbarComponent,
     CompetitionComponent,
-    MatchPreviewComponent
+    MatchPreviewComponent,
+    MatchEventInfoComponent
   ],
   imports: [
     BrowserModule,
