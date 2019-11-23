@@ -9,8 +9,12 @@
     </mat-card-header>
     <div class="matches-list-container">
         <mat-list class="matches-list" *ngIf="matches">
-            <mat-list-item *ngFor="let match of matches.events"> 
-                <span>{{match.homeTeam}} - {{match.awayTeam}}</span>
+            <mat-list-item *ngFor="let match of matches.events">
+                <app-match-preview
+                    class="match-preview-element"
+                    [match]="match">
+                </app-match-preview>
+                <!-- <span>{{match.homeTeam}} - {{match.awayTeam}}</span> -->
             </mat-list-item>
         </mat-list>
     </div>

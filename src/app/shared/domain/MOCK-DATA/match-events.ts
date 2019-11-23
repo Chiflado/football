@@ -10,8 +10,11 @@ export const eredivisieMatches: MatchEvent[] = [
         awayGoals: null,
         homeReds: null,
         awayReds: null,
-        endDate: '2017-08-11T18:30:00Z',
-        startDate: '2017-08-11T20:15:00Z'
+        startDate: '2017-08-11T18:30:00Z',
+        endDate: '2017-08-11T20:15:00Z,',
+        halfTimeHome: null,
+        halfTimeAway: null
+        
     },
     {
         id: 2,
@@ -22,8 +25,11 @@ export const eredivisieMatches: MatchEvent[] = [
         awayGoals: null,
         homeReds: null,
         awayReds: null,
-        endDate: '2017-08-11T18:30:00Z',
-        startDate: '2017-08-11T20:15:00Z'
+        startDate: '2017-08-11T18:30:00Z',
+        endDate: '2017-08-11T20:15:00Z,',
+        halfTimeHome: null,
+        halfTimeAway: null
+        
     },
     {
         id: 3,
@@ -34,8 +40,11 @@ export const eredivisieMatches: MatchEvent[] = [
         awayGoals: null,
         homeReds: null,
         awayReds: null,
-        endDate: '2017-08-11T18:30:00Z',
-        startDate: '2017-08-11T20:15:00Z'
+        startDate: '2017-08-11T18:30:00Z',
+        endDate: '2017-08-11T20:15:00Z,',
+        halfTimeHome: null,
+        halfTimeAway: null
+        
     },
     {
         id: 4,
@@ -46,8 +55,11 @@ export const eredivisieMatches: MatchEvent[] = [
         awayGoals: null,
         homeReds: null,
         awayReds: null,
-        endDate: '2017-08-11T19:30:00Z',
-        startDate: '2017-08-11T21:15:00Z'
+        startDate: '2017-08-11T19:30:00Z',
+        endDate: '2017-08-11T21:15:00Z,',
+        halfTimeHome: null,
+        halfTimeAway: null
+        
     },
     {
         id: 5,
@@ -58,8 +70,11 @@ export const eredivisieMatches: MatchEvent[] = [
         awayGoals: null,
         homeReds: null,
         awayReds: null,
-        endDate: '2017-08-11T20:45:00Z',
-        startDate: '2017-08-11T22:00:00Z'
+        startDate: '2017-08-11T20:45:00Z',
+        endDate: '2017-08-11T22:00:00Z,',
+        halfTimeHome: null,
+        halfTimeAway: null
+        
     },
 ]
 
@@ -73,8 +88,11 @@ export const otpMatches: MatchEvent[] = [
         awayGoals: 0,
         homeReds: 0,
         awayReds: 0,
-        endDate: '2017-08-11T18:30:00Z',
-        startDate: '2017-08-11T20:15:00Z'
+        startDate: '2017-08-11T16:00:00Z',
+        endDate: '2017-08-11T17:45:00Z,',
+        halfTimeHome: 0,
+        halfTimeAway: 0
+        
     },
     {
         id: 7,
@@ -85,8 +103,11 @@ export const otpMatches: MatchEvent[] = [
         awayGoals: 1,
         homeReds: 0,
         awayReds: 1,
-        endDate: '2017-08-11T18:30:00Z',
-        startDate: '2017-08-11T20:15:00Z'
+        startDate: '2017-08-11T16:00:00Z',
+        endDate: '2017-08-11T17:45:00Z,',
+        halfTimeHome: 2,
+        halfTimeAway: 0
+        
     },
     {
         id: 8,
@@ -97,8 +118,11 @@ export const otpMatches: MatchEvent[] = [
         awayGoals: 1,
         homeReds: 0,
         awayReds: 0,
-        endDate: '2017-08-11T18:30:00Z',
-        startDate: '2017-08-11T20:15:00Z'
+        startDate: '2017-08-11T16:30:00Z',
+        endDate: '2017-08-11T17:15:00Z,',
+        halfTimeHome: 0,
+        halfTimeAway: 1
+        
     },
     {
         id: 9,
@@ -109,8 +133,11 @@ export const otpMatches: MatchEvent[] = [
         awayGoals: 1,
         homeReds: 2,
         awayReds: 0,
-        endDate: '2017-08-11T19:30:00Z',
-        startDate: '2017-08-11T21:15:00Z'
+        startDate: '2017-08-11T18:30:00Z',
+        endDate: '2017-08-11T20:15:00Z,',
+        halfTimeHome: 0,
+        halfTimeAway: 1
+        
     },
     {
         id: 10,
@@ -118,11 +145,15 @@ export const otpMatches: MatchEvent[] = [
         homeTeam: 'Újpest',
         awayTeam: 'Diósgyőri VTK',
         homeGoals: 0,
-        awayGoals: 0,
+        awayGoals: 1,
         homeReds: 0,
         awayReds: 1,
-        endDate: '2017-08-11T20:45:00Z',
-        startDate: '2017-08-11T22:00:00Z'
+        startDate: '2017-08-11T19:45:00Z',
+        endDate: '2017-08-11T21:00:00Z,',
+        halfTimeHome: 0,
+        halfTimeAway: 0,
+        currentMinute: 84
+        
     },
 ]
 
@@ -136,8 +167,12 @@ export const premierLegMatches: MatchEvent[] = [
         awayGoals: 0,
         homeReds: 0,
         awayReds: 0,
-        endDate: '2017-08-11T12:30:00Z',
-        startDate: '2017-08-11T24:15:00Z'
+        startDate: '2017-08-11T12:30:00Z',
+        endDate: '2017-08-11T14:15:00Z,',
+        halfTimeHome: null,
+        halfTimeAway: null,
+        currentMinute: 11
+        
     },
     {
         id: 12,
@@ -148,8 +183,11 @@ export const premierLegMatches: MatchEvent[] = [
         awayGoals: null,
         homeReds: null,
         awayReds: null,
-        endDate: '2017-08-11T18:30:00Z',
-        startDate: '2017-08-11T20:15:00Z'
+        startDate: '2017-08-11T18:30:00Z',
+        endDate: '2017-08-11T20:15:00Z,',
+        halfTimeHome: null,
+        halfTimeAway: null
+        
     },
     {
         id: 13,
@@ -160,8 +198,11 @@ export const premierLegMatches: MatchEvent[] = [
         awayGoals: null,
         homeReds: null,
         awayReds: null,
-        endDate: '2017-08-11T18:30:00Z',
-        startDate: '2017-08-11T20:15:00Z'
+        startDate: '2017-08-11T18:30:00Z',
+        endDate: '2017-08-11T20:15:00Z,',
+        halfTimeHome: null,
+        halfTimeAway: null
+        
     }
 ]
 
@@ -175,7 +216,10 @@ export const championsMatches: MatchEvent[] = [
         awayGoals: 1,
         homeReds: 0,
         awayReds: 0,
-        endDate: '2018-05-26T18:45:00Z',
-        startDate: '2017-08-11T21:00:00Z'
+        startDate: '2018-05-26T18:45:00Z',
+        endDate: '2017-08-11T21:00:00Z,',
+        halfTimeHome: 0,
+        halfTimeAway: 0
+        
     }
 ]

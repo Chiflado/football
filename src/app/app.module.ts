@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { CompetitionComponent } from './pages/competition/competition.component';
 import { LayoutRoutingModule } from './layout/layout-router.module';
+import { MatchPreviewComponent } from './pages/competition/match-preview/match-preview.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LayoutRoutingModule } from './layout/layout-router.module';
     LayoutComponent,
     TopNavbarComponent,
     SideNavbarComponent,
-    CompetitionComponent
+    CompetitionComponent,
+    MatchPreviewComponent
   ],
   imports: [
     BrowserModule,

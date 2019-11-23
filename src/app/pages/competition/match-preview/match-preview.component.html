@@ -1,0 +1,29 @@
+<div class="preview-container">
+    <div class="preview-date">
+        <span *ngIf="match.status === 'FINISHED'">{{getMatchDate(match) | date: 'MM.dd HH:mm'}}</span>
+        <span *ngIf="match.status === 'UPCOMING'">{{getMatchDate(match) | date: 'HH:mm'}}</span>
+        <span *ngIf="match.status === 'LIVE'" class="text-red">{{getMatchDate(match)}}'</span>
+    </div>
+    <div class="center-content">
+        <div class="home-preview">
+            <span>
+                {{match.homeTeam}}
+            </span>
+        </div>
+        <div class="score-preview">
+            <span *ngIf="match.status === 'UPCOMING'"> - </span>
+            <span
+                *ngIf="match.status !== 'UPCOMING'"
+                [ngClass]="{ 'text-red': match.status === 'LIVE' }"
+            >{{match.homeGoals}} - {{match.awayGoals}}</span>
+        </div>
+        <div class="away-preview">
+            <span>
+                {{match.awayTeam}}
+            </span>
+        </div>
+    </div>
+    <div class="preview-info">
+        <span *ngIf="match.currentMinute > 45 || match.status === 'FINISHED'">({{match.halfTimeHome}} - {{match.halfTimeAway}})</span>
+    </div>
+</div>

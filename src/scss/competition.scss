@@ -3,3 +3,42 @@
     background: lightgray;
     overflow-y: auto;
 }
+
+.match-preview-element {
+    width: 100%;
+}
+
+.preview-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .preview-date {
+        width: 10%;
+    }
+
+
+    .center-content {
+        display: flex;
+        justify-content: flex-start;
+        width: 60%;
+        .home-preview,
+        .score-preview,
+        .away-preview {
+            display: flex;
+            width: 33%;
+        }
+        .home-preview {
+            justify-content: flex-end;
+        }
+        .score-preview {
+            justify-content: center;
+        }
+        .away-preview {
+            justify-content: flex-start;
+        }
+    }
+    .preview-info {
+        width: 10%;
+    }
+}

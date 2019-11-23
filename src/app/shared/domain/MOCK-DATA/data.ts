@@ -38,5 +38,8 @@ export interface MatchEvent {
     awayGoals: number;
     homeReds: number;
     awayReds: number;
+    halfTimeHome: number;
+    halfTimeAway: number;
+    currentMinute?: number;
 }
 
