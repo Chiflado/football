@@ -1,5 +1,17 @@
 <mat-card class="competition-content">
-    <mat-card-header>
-        <mat-card-title *ngIf="competetition">{{competetition.name}}</mat-card-title>
+    <mat-card-header *ngIf="competetition">
+        <mat-card-title>{{competetition.name}}</mat-card-title>
+        <mat-card-subtitle>
+            <span>Season: {{getSeason(competetition)}}</span>
+            <br>
+            <span>Matchday: {{competetition.currentSeason.currentMatchday}}</span>
+        </mat-card-subtitle>
     </mat-card-header>
+    <div class="matches-list-container">
+        <mat-list class="matches-list" *ngIf="matches">
+            <mat-list-item *ngFor="let match of matches.events"> 
+                <span>{{match.homeTeam}} - {{match.awayTeam}}</span>
+            </mat-list-item>
+        </mat-list>
+    </div>
 </mat-card>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Competition } from 'src/app/shared/domain/MOCK-DATA/data';
+import { Competition, MatchDay } from 'src/app/shared/domain/MOCK-DATA/data';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/shared/domain/data-service/data.service';
 
@@ -11,6 +11,7 @@ import { DataService } from 'src/app/shared/domain/data-service/data.service';
 export class CompetitionComponent implements OnInit {
 
   competetition: Competition;
+  matches: MatchDay;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,10 +27,21 @@ export class CompetitionComponent implements OnInit {
     const compId = sessionStorage.getItem('compId');
     if (compId) {
       this.dataService.getCompetition(Number(compId))
-        .subscribe(response => this.competetition = response);
+        .subscribe(response => {
+          this.competetition = response;
+          this.dataService.getMatches(this.competetition).subscribe(resp => this.matches = resp)
+        });
     } else {
       this.router.navigate(['/']);
     }
+  }
+
+  getMatches() {}
+
+  getSeason(comp: Competition) {
+    const start = comp.currentSeason.startDate;
+    const end = comp.currentSeason.endDate;
+    return new Date(start).getFullYear() + '/' + new Date(end).getFullYear();
   }
 
 }

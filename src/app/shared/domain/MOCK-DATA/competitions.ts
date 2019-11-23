@@ -36,14 +36,14 @@ export const MockCompetetions: Competition[] = [
         code: null,
         plan: 'TIER_ONE',
         currentSeason: {
-            id: 4,
+            id: 3,
             startDate: '2017-08-11T19:00:00Z',
             endDate: '2018-05-20T16:45:00Z',
             currentMatchday: 33
         },
         seasons: [
             {
-                id: 4,
+                id: 3,
                 startDate: '2017-08-11T19:00:00Z',
                 endDate: '2018-05-20T16:45:00Z',
                 currentMatchday: 33
@@ -61,14 +61,14 @@ export const MockCompetetions: Competition[] = [
         code: null,
         plan: 'TIER_ONE',
         currentSeason: {
-            id: 3,
+            id: 1,
             startDate: '2017-08-11T19:00:00Z',
             endDate: '2018-05-20T16:45:00Z',
             currentMatchday: 34
         },
         seasons: [
             {
-                id: 4,
+                id: 1,
                 startDate: '2017-08-11T19:00:00Z',
                 endDate: '2018-05-20T16:45:00Z',
                 currentMatchday: 34
