@@ -6,12 +6,18 @@
         <span
             class="homeEvent"
             *ngIf="match.match.homeTeam.name === firstHalfEvent.team.name">
-            {{firstHalfEvent.minute}}'
+            <app-event-row
+                [team]="'HOME'"
+                [event]="firstHalfEvent">
+            </app-event-row>
         </span>
         <span
             class="awayEvent"
             *ngIf="match.match.awayTeam.name === firstHalfEvent.team.name">
-            {{firstHalfEvent.minute}}'
+            <app-event-row
+                [team]="'AWAY'"
+                [event]="firstHalfEvent">
+            </app-event-row>
         </span>
     </mat-list-item>
 </mat-list>
@@ -22,12 +28,18 @@
         <span
             class="homeEvent"
             *ngIf="match.match.homeTeam.name === secondHalfEvent.team.name">
-            {{secondHalfEvent.minute}}'
+            <app-event-row
+                [team]="'HOME'"
+                [event]="secondHalfEvent">
+            </app-event-row>
         </span>
         <span
             class="awayEvent"
             *ngIf="match.match.awayTeam.name === secondHalfEvent.team.name">
-            {{secondHalfEvent.minute}}'
+            <app-event-row
+                [team]="'AWAY'"
+                [event]="secondHalfEvent">
+            </app-event-row>
         </span>
     </mat-list-item>
 </mat-list>

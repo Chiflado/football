@@ -13,6 +13,7 @@ import { LayoutRoutingModule } from './layout/layout-router.module';
 import { MatchPreviewComponent } from './pages/competition/match-preview/match-preview.component';
 import { MatchEventInfoComponent } from './pages/match-event-info/match-event-info.component';
 import { MatchSummaryComponent } from './pages/match-event-info/match-summary/match-summary.component';
+import { EventRowComponent } from './pages/match-event-info/match-summary/event-row/event-row.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MatchSummaryComponent } from './pages/match-event-info/match-summary/ma
     CompetitionComponent,
     MatchPreviewComponent,
     MatchEventInfoComponent,
-    MatchSummaryComponent
+    MatchSummaryComponent,
+    EventRowComponent
   ],
   imports: [
     BrowserModule,

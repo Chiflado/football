@@ -1,0 +1,28 @@
+<div class="event-row-container">
+    <span *ngIf="team === 'HOME'">
+        {{event.minute}}' - 
+    </span>
+    <span
+        *ngIf="event.scorer"
+        [ngClass]="{ 'own-goal' : event.type === 'OWNGOAL' }">
+        {{ event.scorer.name }}
+    </span>
+    <span *ngIf="event.type === 'OWNGOAL'">
+         (owngoal)
+    </span>
+    <span *ngIf="event.type === 'PENALTY'">
+         (penalty)
+    </span>
+    <span *ngIf="event.type === 'REGULAR' && event.assist">
+        ({{ event.assist.name }})
+    </span>
+    <span *ngIf="event.card">
+        {{ event.player.name}} - {{ event.card }}
+    </span>
+    <span *ngIf="event.playerOut">
+        ^ {{event.playerIn.name}} ˇ {{ event.playerOut.name}}
+    </span>
+    <span *ngIf="team === 'AWAY'">
+         - {{event.minute}}'
+    </span>
+</div>
