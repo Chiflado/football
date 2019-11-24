@@ -1,28 +1,68 @@
 <div class="event-row-container">
-    <span *ngIf="team === 'HOME'">
-        {{event.minute}}' - 
+    <span *ngIf="team === 'HOME'" class="minute-indicator">
+        {{event.minute}}'
     </span>
-    <span
-        *ngIf="event.scorer"
-        [ngClass]="{ 'own-goal' : event.type === 'OWNGOAL' }">
-        {{ event.scorer.name }}
-    </span>
-    <span *ngIf="event.type === 'OWNGOAL'">
-         (owngoal)
-    </span>
-    <span *ngIf="event.type === 'PENALTY'">
-         (penalty)
-    </span>
-    <span *ngIf="event.type === 'REGULAR' && event.assist">
-        ({{ event.assist.name }})
+    <span *ngIf="event.scorer" [ngClass]="{ 'own-goal' : event.type === 'OWNGOAL' }">
+        <span>
+            <mat-icon *ngIf="team === 'HOME'">sports_soccer</mat-icon>
+            {{ event.scorer.name }}
+        </span>
+        <span *ngIf="event.type === 'OWNGOAL'" class="own-goal">
+             (owngoal)
+        </span>
+        <span *ngIf="event.type === 'PENALTY'">
+             (penalty)
+        </span>
+        <span *ngIf="event.type === 'REGULAR' && event.assist">
+            ({{ event.assist.name }})
+        </span>
+        <mat-icon *ngIf="team === 'AWAY'">
+            sports_soccer
+        </mat-icon>
     </span>
     <span *ngIf="event.card">
-        {{ event.player.name}} - {{ event.card }}
+        <mat-icon
+            *ngIf="team === 'HOME'"
+            [ngClass]="{
+            'yellow-card-indicator' : event.card === 'YELLOW_CARD',
+            'red-card-indicator' : event.card === 'RED_CARD'
+            }">
+            bookmark
+        </mat-icon>
+        <span>
+            {{ event.player.name}}
+        </span>
+        <mat-icon
+            *ngIf="team === 'AWAY'"
+            [ngClass]="{
+            'yellow-card-indicator' : event.card === 'YELLOW_CARD',
+            'red-card-indicator' : event.card === 'RED_CARD'
+            }">
+            bookmark
+        </mat-icon>
     </span>
-    <span *ngIf="event.playerOut">
-        ^ {{event.playerIn.name}} ˇ {{ event.playerOut.name}}
+    <span *ngIf="event.playerOut" class="sub-row">
+        <span *ngIf="team === 'HOME'">
+            <mat-icon class="player-in-indicator">arrow_upward</mat-icon>
+            <span>
+                {{event.playerIn.name}}
+            </span>
+        </span>
+        <span>
+            <mat-icon *ngIf="team === 'HOME'" class="player-out-indicator">arrow_downward</mat-icon>
+            <span>
+                {{ event.playerOut.name}}
+            </span>
+            <mat-icon *ngIf="team === 'AWAY'" class="player-out-indicator">arrow_downward</mat-icon>
+        </span>
+        <span *ngIf="team === 'AWAY'">
+            <span>
+                {{event.playerIn.name}}
+            </span>
+            <mat-icon class="player-in-indicator">arrow_upward</mat-icon>
+        </span>
     </span>
-    <span *ngIf="team === 'AWAY'">
-         - {{event.minute}}'
+    <span *ngIf="team === 'AWAY'" class="minute-indicator">
+        {{event.minute}}'
     </span>
 </div>

@@ -10,11 +10,26 @@ import { MatchData } from 'src/app/shared/domain/MOCK-DATA/data';
 export class MatchEventInfoComponent implements OnInit {
 
   match: MatchData;
+  homeGoals = 0;
+  awayGoals = 0;
 
   constructor(private dataSevice: DataService) { }
 
   ngOnInit() {
-    this.dataSevice.getMatch().subscribe(reponse => this.match = reponse);
+    this.dataSevice.getMatch().subscribe(reponse => {
+      this.match = reponse;
+      this.getGoals();
+    });
+  }
+
+  getGoals() {
+    this.match.match.goals.forEach(goal => {
+      if (goal.team.name === this.match.match.homeTeam.name) {
+        this.homeGoals++;
+      } else {
+        this.awayGoals++;
+      }
+    });
   }
 
 }

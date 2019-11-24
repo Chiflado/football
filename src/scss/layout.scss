@@ -52,6 +52,13 @@
 
 .content-card {
     height: calc(100% - 30px);
-    background: lightgray;
+    background: whitesmoke;
     overflow-y: auto;
+}
+
+.half-header {
+    background: lightgray;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
 }
