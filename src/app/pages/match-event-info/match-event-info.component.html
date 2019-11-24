@@ -1,1 +1,20 @@
-<p>match-event-info works!</p>
+<mat-card class="content-card">
+    <mat-card-header *ngIf="match">
+        <mat-card-subtitle>
+            {{ match.match.competition.name }} - {{ match.match.group }}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+            {{ match.match.utcDate | date: 'yyyy.MM.dd. HH:mm'}}
+        </mat-card-subtitle>
+        <mat-card-title>{{match.match.homeTeam.name}} - {{match.match.awayTeam.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-tab-group>
+        <mat-tab label="Match summary">
+            <app-match-summary
+                [match]="match">
+            </app-match-summary>
+        </mat-tab>
+        <mat-tab label="Statistics"> Content 2 </mat-tab>
+        <mat-tab label="Lineups"> Content 3 </mat-tab>
+    </mat-tab-group>
+</mat-card>

@@ -1,4 +1,6 @@
-const realPool = {
+import { MatchData } from "./data";
+
+export const realPool: MatchData = {
     head2head: {
         numberOfMatches: 1,
         totalGoals: 4,
@@ -323,7 +325,7 @@ const realPool = {
             {
                 minute: 51,
                 extraTime: null,
-                type: "REGULAR",
+                type: "PENALTY",
                 team: {
                     id: 86,
                     name: "Real Madrid CF"
@@ -354,19 +356,16 @@ const realPool = {
             {
                 minute: 64,
                 extraTime: null,
-                type: "REGULAR",
+                type: "OWNGOAL",
                 team: {
                     id: 86,
                     name: "Real Madrid CF"
                 },
                 scorer: {
                     id: 3876,
-                    name: "Gareth Bale"
+                    name: "Dejan Lovren"
                 },
-                assist: {
-                    id: 48,
-                    name: "Marcelo"
-                }
+                assist: null
             },
             {
                 minute: 83,

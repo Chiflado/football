@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Competition, MatchDay } from '../MOCK-DATA/data';
+import { Competition, MatchDay, MatchData } from '../MOCK-DATA/data';
 import { MockCompetetions } from '../MOCK-DATA/competitions';
 import { matchDays } from '../MOCK-DATA/matchdays';
+import { realPool } from '../MOCK-DATA/matches';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,12 @@ export class DataService {
         m.seasonId === comp.currentSeason.id
         && m.currentMatchDay === comp.currentSeason.currentMatchday
         )
+    )
+  }
+
+  getMatch(): Observable<MatchData> {
+    return of(
+      realPool
     )
   }
 }

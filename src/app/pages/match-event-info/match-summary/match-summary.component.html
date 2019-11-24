@@ -1,0 +1,35 @@
+<div class="matches-list-container">
+<h5>First half</h5>
+<mat-list>
+    <mat-list-item
+        *ngFor="let firstHalfEvent of firstHalf">
+        <span
+            class="homeEvent"
+            *ngIf="match.match.homeTeam.name === firstHalfEvent.team.name">
+            {{firstHalfEvent.minute}}'
+        </span>
+        <span
+            class="awayEvent"
+            *ngIf="match.match.awayTeam.name === firstHalfEvent.team.name">
+            {{firstHalfEvent.minute}}'
+        </span>
+    </mat-list-item>
+</mat-list>
+<h5>Second half</h5>
+<mat-list>
+    <mat-list-item
+        *ngFor="let secondHalfEvent of secondHalf">
+        <span
+            class="homeEvent"
+            *ngIf="match.match.homeTeam.name === secondHalfEvent.team.name">
+            {{secondHalfEvent.minute}}'
+        </span>
+        <span
+            class="awayEvent"
+            *ngIf="match.match.awayTeam.name === secondHalfEvent.team.name">
+            {{secondHalfEvent.minute}}'
+        </span>
+    </mat-list-item>
+</mat-list>
+
+</div>

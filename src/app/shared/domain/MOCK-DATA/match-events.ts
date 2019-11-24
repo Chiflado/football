@@ -145,7 +145,7 @@ export const otpMatches: MatchEvent[] = [
         homeTeam: 'Újpest',
         awayTeam: 'Diósgyőri VTK',
         homeGoals: 0,
-        awayGoals: 1,
+        awayGoals: 2,
         homeReds: 0,
         awayReds: 1,
         startDate: '2017-08-11T19:45:00Z',

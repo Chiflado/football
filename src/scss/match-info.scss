@@ -1,0 +1,13 @@
+.homeEvent,
+.awayEvent {
+    display: flex;
+    width: 100%;
+}
+
+.homeEvent {
+    justify-content: flex-start;
+}
+
+.awayEvent {
+    justify-content: flex-end;
+}
