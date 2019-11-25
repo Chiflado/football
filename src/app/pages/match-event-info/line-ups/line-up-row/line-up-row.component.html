@@ -19,8 +19,16 @@
                 bookmark
             </mat-icon>
         </span>
+        <span *ngIf="playerIn" class="player-info">
+            <mat-icon class="player-out-indicator">arrow_downward</mat-icon>
+            <span class="opacity-text">({{playerIn}})</span>
+        </span>
     </div>
     <div class="player-wrapper" *ngIf="team === 'AWAY'">
+        <span *ngIf="playerIn" class="player-info">
+            <span class="opacity-text">({{playerIn}})</span>
+            <mat-icon class="player-out-indicator">arrow_downward</mat-icon>
+        </span>
         <span class="player-info" *ngIf="booked" [ngClass]="{ 'yellow-card-indicator' : card === 'YELLOW_CARD' }">
             <mat-icon>
                 bookmark

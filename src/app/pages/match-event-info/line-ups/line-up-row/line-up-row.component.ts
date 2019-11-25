@@ -14,32 +14,54 @@ export class LineUpRowComponent implements OnInit {
   @Input() events;
 
   substition;
+  
   scored = false;
   owngoal = false;
   booked = false;
+
   card: string;
+  playerIn: string;
+  playerOut: string;
 
   constructor() { }
 
   ngOnInit() {
-    this.isScoredOrBooked();
+    this.getPlayerInfos();
   }
 
-  isScoredOrBooked() {
+  getPlayerInfos() {
     this.events.forEach(e => {
-      if (e.scorer && e.scorer.id === this.player.id) {
-        this.scored = true;
-        if (e.type === 'OWNGOAL') {
-          this.owngoal = true;
-        }
-      }
-      if (e.card && e.player.id === this.player.id) {
-        this.booked = true;
-        if (e.card === 'YELLOW_CARD') {
-          this.card = 'YELLOW_CARD';
-        }
-      }
+      this.isScored(e);
+      this.isBooked(e);
+      this.isSubbed(e);
     });
+  }
+
+  isScored(event) {
+    if (event.scorer && event.scorer.id === this.player.id) {
+      this.scored = true;
+      if (event.type === 'OWNGOAL') {
+        this.owngoal = true;
+      }
+    }
+  }
+
+  isBooked(event) {
+    if (event.card && event.player.id === this.player.id) {
+      this.booked = true;
+      if (event.card === 'YELLOW_CARD') {
+        this.card = 'YELLOW_CARD';
+      }
+    }
+  }
+
+  isSubbed(event) {
+    if (event.playerOut) {
+      if (event.playerOut.id === this.player.id) {
+        this.playerIn = event.playerIn.name;
+      } else if (event.playerIn.id === this.player.id) {
+        this.playerOut = event.playerOut.name;      }
+    }
   }
 
 }

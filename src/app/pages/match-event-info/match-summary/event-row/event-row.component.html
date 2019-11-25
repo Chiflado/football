@@ -7,10 +7,10 @@
             <mat-icon *ngIf="team === 'HOME'">sports_soccer</mat-icon>
             {{ event.scorer.name }}
         </span>
-        <span *ngIf="event.type === 'OWNGOAL'" class="own-goal" class="opacity-text">
+        <span *ngIf="event.type === 'OWNGOAL'" class="own-goal">
              (owngoal)
         </span>
-        <span *ngIf="event.type === 'PENALTY'" class="opacity-text">
+        <span *ngIf="event.type === 'PENALTY'">
              (penalty)
         </span>
         <span *ngIf="event.type === 'REGULAR' && event.assist" class="opacity-text">
