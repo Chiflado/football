@@ -1,19 +1,19 @@
 <div class="event-row-container">
-    <span *ngIf="team === 'HOME'" class="minute-indicator">
+    <strong *ngIf="team === 'HOME'" class="minute-indicator">
         {{event.minute}}'
-    </span>
+    </strong>
     <span *ngIf="event.scorer" [ngClass]="{ 'own-goal' : event.type === 'OWNGOAL' }">
         <span>
             <mat-icon *ngIf="team === 'HOME'">sports_soccer</mat-icon>
             {{ event.scorer.name }}
         </span>
-        <span *ngIf="event.type === 'OWNGOAL'" class="own-goal">
+        <span *ngIf="event.type === 'OWNGOAL'" class="own-goal" class="opacity-text">
              (owngoal)
         </span>
-        <span *ngIf="event.type === 'PENALTY'">
+        <span *ngIf="event.type === 'PENALTY'" class="opacity-text">
              (penalty)
         </span>
-        <span *ngIf="event.type === 'REGULAR' && event.assist">
+        <span *ngIf="event.type === 'REGULAR' && event.assist" class="opacity-text">
             ({{ event.assist.name }})
         </span>
         <mat-icon *ngIf="team === 'AWAY'">
@@ -50,8 +50,8 @@
         </span>
         <span>
             <mat-icon *ngIf="team === 'HOME'" class="player-out-indicator">arrow_downward</mat-icon>
-            <span>
-                {{ event.playerOut.name}}
+            <span class="opacity-text">
+                ({{ event.playerOut.name}})
             </span>
             <mat-icon *ngIf="team === 'AWAY'" class="player-out-indicator">arrow_downward</mat-icon>
         </span>
@@ -62,7 +62,7 @@
             <mat-icon class="player-in-indicator">arrow_upward</mat-icon>
         </span>
     </span>
-    <span *ngIf="team === 'AWAY'" class="minute-indicator">
+    <strong *ngIf="team === 'AWAY'" class="minute-indicator">
         {{event.minute}}'
-    </span>
+    </strong>
 </div>
