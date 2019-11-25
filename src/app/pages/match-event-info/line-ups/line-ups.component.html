@@ -1,0 +1,8 @@
+<div class="match-line-ups-container">
+    <mat-list>
+        <mat-list-item
+            *ngFor="let player of match.match.homeTeam.lineup">
+            {{player.name}}
+        </mat-list-item>
+    </mat-list>
+</div>
