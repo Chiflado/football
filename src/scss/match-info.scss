@@ -2,9 +2,46 @@
 .awayEvent,
 .event-row-container,
 .summary-title,
-.sub-row {
+.sub-row,
+.match-line-ups-container,
+.line-up-row-container {
     display: flex;
     width: 100%;
+}
+
+.match-line-ups-container {
+    justify-content: space-between;
+}
+
+.line-up-list-wrapper {
+    width: 50%;
+}
+
+.away-line-up-list-wrapper {
+
+    .mat-list-item-content {
+        justify-content: flex-end;
+    }
+}
+
+.line-up-row-container-home,
+.line-up-row-container-away {
+    display: flex;
+    width: 100%;
+}
+
+.line-up-row-container-away {
+    justify-items: flex-end;
+    justify-content: flex-end;
+}
+
+
+.player-wrapper {
+    display: flex;
+
+    .player-info {
+        margin: 0 5px;
+    }
 }
 
 .homeEvent {

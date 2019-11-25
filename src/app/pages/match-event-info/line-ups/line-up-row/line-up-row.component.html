@@ -1,0 +1,19 @@
+<div 
+    class="line-up-row-container"
+    [ngClass]="{
+    'line-up-row-container-home' : team === 'HOME',
+    'line-up-row-container-away' : team === 'AWAY'
+}">
+    <div class="player-wrapper" *ngIf="team === 'HOME'">
+        <strong class="player-info">{{player.shirtNumber}}</strong>
+        <span class="player-info">{{player.name}}</span>
+        <span class="player-info" *ngIf="player.position === 'Goalkeeper'">(gk)</span>
+        <span class="player-info" *ngIf="player.id === captain.id">(c)</span>
+    </div>
+    <div class="player-wrapper" *ngIf="team === 'AWAY'">
+        <span class="player-info" *ngIf="player.position === 'Goalkeeper'">(gk)</span>
+        <span class="player-info" *ngIf="player.id === captain.id">(c)</span>
+        <span class="player-info">{{player.name}}</span>
+        <strong class="player-info">{{player.shirtNumber}}</strong>
+    </div>
+</div>

@@ -43,7 +43,7 @@ export interface MatchEvent {
     currentMinute?: number;
 }
 
-interface Team {
+export interface Team {
     id: number,
     name: string,
     coach: Coach,
@@ -52,14 +52,14 @@ interface Team {
     bench: Player[]
 }
 
-interface Coach {
+export interface Coach {
     id: number,
     name: string,
     countryOfBirth: string,
     nationality: string
 }
 
-interface Player {
+export interface Player {
     id: number,
     name: string,
     position?: string,
