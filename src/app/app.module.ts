@@ -16,6 +16,8 @@ import { MatchSummaryComponent } from './pages/match-event-info/match-summary/ma
 import { EventRowComponent } from './pages/match-event-info/match-summary/event-row/event-row.component';
 import { LineUpsComponent } from './pages/match-event-info/line-ups/line-ups.component';
 import { LineUpRowComponent } from './pages/match-event-info/line-ups/line-up-row/line-up-row.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { LineUpRowComponent } from './pages/match-event-info/line-ups/line-up-ro
     AppRoutingModule,
     LayoutRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
