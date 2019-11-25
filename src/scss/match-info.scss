@@ -4,7 +4,8 @@
 .summary-title,
 .sub-row,
 .match-line-ups-container,
-.line-up-row-container {
+.line-up-row-container,
+.lineup-header {
     display: flex;
     width: 100%;
 }
@@ -78,4 +79,9 @@
 
 .yellow-card-indicator {
     color: yellow;
+}
+
+.lineup-header {
+    justify-content: center;
+    background: lightgray;
 }

@@ -1,4 +1,6 @@
-<strong>TODO: SUBS</strong>
+<div class="lineup-header">
+    <h4>Starting lineups</h4>
+</div>
 <div class="match-line-ups-container">
     <mat-list>
         <mat-list-item
@@ -16,6 +18,35 @@
         <mat-list-item
             class="away-line-up-list-wrapper"
             *ngFor="let player of match.match.awayTeam.lineup">
+            <app-line-up-row
+                [player]="player"
+                [captain]="match.match.awayTeam.captain"
+                [team]="'AWAY'"
+                [events]="events">
+            </app-line-up-row>
+        </mat-list-item>
+    </mat-list>
+</div>
+<div class="lineup-header">
+    <h4>Bench</h4>
+</div>
+<div class="match-line-ups-container">
+    <mat-list>
+        <mat-list-item
+            class="line-up-list-wrapper"
+            *ngFor="let player of match.match.homeTeam.bench">
+            <app-line-up-row
+                [player]="player"
+                [captain]="match.match.homeTeam.captain"
+                [team]="'HOME'"
+                [events]="events">
+            </app-line-up-row>
+        </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item
+            class="away-line-up-list-wrapper"
+            *ngFor="let player of match.match.awayTeam.bench">
             <app-line-up-row
                 [player]="player"
                 [captain]="match.match.awayTeam.captain"
