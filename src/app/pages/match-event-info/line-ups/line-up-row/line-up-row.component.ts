@@ -16,19 +16,27 @@ export class LineUpRowComponent implements OnInit {
   substition;
   scored = false;
   owngoal = false;
+  booked = false;
+  card: string;
 
   constructor() { }
 
   ngOnInit() {
-    this.isScored();
+    this.isScoredOrBooked();
   }
 
-  isScored() {
+  isScoredOrBooked() {
     this.events.forEach(e => {
       if (e.scorer && e.scorer.id === this.player.id) {
         this.scored = true;
         if (e.type === 'OWNGOAL') {
           this.owngoal = true;
+        }
+      }
+      if (e.card && e.player.id === this.player.id) {
+        this.booked = true;
+        if (e.card === 'YELLOW_CARD') {
+          this.card = 'YELLOW_CARD';
         }
       }
     });

@@ -14,8 +14,18 @@
                 sports_soccer
             </mat-icon>
         </span>
+        <span class="player-info" *ngIf="booked" [ngClass]="{ 'yellow-card-indicator' : card === 'YELLOW_CARD' }">
+            <mat-icon>
+                bookmark
+            </mat-icon>
+        </span>
     </div>
     <div class="player-wrapper" *ngIf="team === 'AWAY'">
+        <span class="player-info" *ngIf="booked" [ngClass]="{ 'yellow-card-indicator' : card === 'YELLOW_CARD' }">
+            <mat-icon>
+                bookmark
+            </mat-icon>
+        </span>
         <span class="player-info" *ngIf="scored" [ngClass]="{ 'own-goal' : owngoal }">
             <mat-icon>
                 sports_soccer
