@@ -9,10 +9,20 @@
         <span class="player-info">{{player.name}}</span>
         <span class="player-info" *ngIf="player.position === 'Goalkeeper'">(gk)</span>
         <span class="player-info" *ngIf="player.id === captain.id">(c)</span>
+        <span class="player-info" *ngIf="scored" [ngClass]="{ 'own-goal' : owngoal }">
+            <mat-icon>
+                sports_soccer
+            </mat-icon>
+        </span>
     </div>
     <div class="player-wrapper" *ngIf="team === 'AWAY'">
-        <span class="player-info" *ngIf="player.position === 'Goalkeeper'">(gk)</span>
+        <span class="player-info" *ngIf="scored" [ngClass]="{ 'own-goal' : owngoal }">
+            <mat-icon>
+                sports_soccer
+            </mat-icon>
+        </span>
         <span class="player-info" *ngIf="player.id === captain.id">(c)</span>
+        <span class="player-info" *ngIf="player.position === 'Goalkeeper'">(gk)</span>
         <span class="player-info">{{player.name}}</span>
         <strong class="player-info">{{player.shirtNumber}}</strong>
     </div>

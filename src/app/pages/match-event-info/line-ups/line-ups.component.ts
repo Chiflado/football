@@ -9,10 +9,19 @@ import { MatchData } from 'src/app/shared/domain/MOCK-DATA/data';
 export class LineUpsComponent implements OnInit {
 
   @Input() match: MatchData;
+  events;
 
   constructor() { }
 
   ngOnInit() {
+    this.getEvents();
+  }
+
+  getEvents() {
+    this.events = [];
+    this.match.match.bookings.forEach(b => this.events.push(b));
+    this.match.match.goals.forEach(g => this.events.push(g));
+    this.match.match.substitutions.forEach(s => this.events.push(s));
   }
 
 }

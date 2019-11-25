@@ -362,7 +362,7 @@ export const realPool: MatchData = {
                     name: "Real Madrid CF"
                 },
                 scorer: {
-                    id: 3876,
+                    id: 7859,
                     name: "Dejan Lovren"
                 },
                 assist: null
