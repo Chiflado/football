@@ -56,3 +56,28 @@
         </mat-list-item>
     </mat-list>
 </div>
+<div class="lineup-header">
+    <h4>Coaches</h4>
+</div>
+<div class="match-line-ups-container">
+    <mat-list>
+        <mat-list-item>
+        <div 
+            class="line-up-row-container line-up-row-container-home">
+            <div class="player-wrapper">
+                <span> {{match.match.homeTeam.coach.name}} </span>
+            </div>
+        </div>
+        </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item>
+        <div 
+            class="line-up-row-container line-up-row-container-away">
+            <div class="player-wrapper">
+                <span> {{match.match.awayTeam.coach.name}} </span>
+            </div>
+        </div>
+        </mat-list-item>
+    </mat-list>
+</div>
